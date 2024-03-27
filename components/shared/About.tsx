@@ -10,7 +10,7 @@ const About = () => {
         <div>Read more</div>
       </div>
       <div className='self-center mt-20 w-full '>
-        <div className='grid gap-10 sm:grid-cols-4'>
+        <div className='grid gap-10 md:grid-cols-4'>
           <div className='flex flex-col sm:col-span-2 '>
             <div className='text-4xl leading-[52px] text-neutral-900 max-md:mt-10 max-md:max-w-full'>
               Vi tilbyr et variert utvalg av parkettgulv og tilbehOr, samt
@@ -59,7 +59,7 @@ const About = () => {
            col-span-1 col-end-5'
         />
       </div>
-      <div className='sm:grid sm:grid-cols-4 gap-10 mt-28 text-neutral-900 '>
+      <div className='md:grid md:grid-cols-4 gap-10 mt-28 text-neutral-900 '>
         <h1 className='flex text-[250px] mt-[-80px] col-start-2 col-span-1 text-orange-700'>
           19
         </h1>
