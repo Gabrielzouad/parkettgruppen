@@ -11,7 +11,7 @@ import { Card, CardContent } from '../ui/card';
 
 const Prosjekter = () => {
   return (
-    <div className='flex flex-col px-16 mt-52 mx-auto max-w-screen-2xl'>
+    <div className='flex flex-col px-16 mt-52 mx-auto max-w-screen-2xl '>
       <Divider Character='B' />
       <div className='flex gap-5 justify-between ml-16  text-lg text-neutral-900 '>
         <div>PROSJEKTER</div>
@@ -22,7 +22,7 @@ const Prosjekter = () => {
         opts={{
           align: 'start',
         }}
-        className='w-full  pt-10 mx-auto '
+        className=' w-full sm:w-4/6 pt-10 mx-auto'
       >
         <CarouselPrevious />
         <CarouselContent>

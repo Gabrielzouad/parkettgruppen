@@ -63,7 +63,7 @@ export function Navbar() {
         height={150}
         className='cursor-pointer'
       />
-      <NavigationMenu>
+      <NavigationMenu className='hidden sm:flex'>
         <NavigationMenuList>
           <NavigationMenuItem>
             <Link href='/docs' legacyBehavior passHref>
@@ -96,8 +96,6 @@ export function Navbar() {
             </NavigationMenuContent>
           </NavigationMenuItem>
         </NavigationMenuList>
-      </NavigationMenu>
-      <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
             <Link href='/docs' legacyBehavior passHref>
