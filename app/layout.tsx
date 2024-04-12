@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
-import { Bayon } from 'next/font/google';
+import { Oswald } from 'next/font/google';
 
 import './globals.css';
 import { Navbar } from '@/components/shared/Navbar';
 
-const bayon = Bayon({ subsets: ['latin'], weight: '400' });
+const oswald = Oswald({ subsets: ['latin'], weight: '400' });
 
 export const metadata: Metadata = {
   title: 'Parkettgruppen',
@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={bayon.className}>
+      <body className={oswald.className}>
         <Navbar />
         {children}
       </body>

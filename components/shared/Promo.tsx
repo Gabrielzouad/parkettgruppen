@@ -13,8 +13,8 @@ const Promo = () => {
           PARKETTGRUPPEN
         </div>
       </div>
-      <div className='relative self-end text-6xl lg:text-8xl w-1/2'>
-        Vi tenker paa parkett nesten dognet rundt.
+      <div className='relative self-end text-6xl lg:text-8xl w-1/2 uppercase'>
+        Vi tenker på parkett nesten døgnet rundt.
       </div>
     </div>
   );

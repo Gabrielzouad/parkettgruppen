@@ -10,7 +10,7 @@ const Produkter = () => {
         <div>PRODUKTER</div>
         <div>SE ALLE PRODUKTER</div>
       </div>
-      <div className='grid ml-16 md:grid-cols-2 pt-10'>
+      <div className='grid md:ml-16 md:grid-cols-2 pt-10'>
         <div className='flex flex-col'>
           <div className='flex items-center gap-4'>
             <ArrowRight />

@@ -15,7 +15,7 @@ const Prosjekter = () => {
       <Divider Character='B' />
       <div className='flex gap-5 justify-between ml-16  text-lg text-neutral-900 '>
         <div>PROSJEKTER</div>
-        <div>SE ALLE PROSJEKTER</div>
+        <div className='line-clamp-1'>SE ALLE PROSJEKTER</div>
       </div>
 
       <Carousel

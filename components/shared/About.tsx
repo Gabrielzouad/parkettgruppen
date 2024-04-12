@@ -3,18 +3,21 @@ import Divider from './Divider';
 
 const About = () => {
   return (
-    <div className='flex flex-col px-16 mt-52 mx-auto max-w-screen-2xl'>
+    <div className='flex flex-col px-16 mt-32 mx-auto max-w-screen-2xl'>
       <Divider Character='A' />
       <div className='flex gap-5 justify-between ml-16 max-w-full text-lg text-neutral-900 '>
         <div>OM OSS</div>
-        <div>Read more</div>
+        <div>LES MER</div>
       </div>
       <div className='self-center mt-20 w-full '>
         <div className='grid gap-10 md:grid-cols-4'>
           <div className='flex flex-col sm:col-span-2 '>
-            <div className='text-4xl leading-[52px] text-neutral-900 max-md:mt-10 max-md:max-w-full'>
-              Vi tilbyr et variert utvalg av parkettgulv og tilbehOr, samt
-              utendOrs terrassebord i ulike treslag. LOKALISERT I HAUGESUND
+            <div className='text-4xl leading-[52px] text-neutral-900 max-md:mt-10 max-md:max-w-full uppercase'>
+              Vi tilbyr et variert utvalg av parkettgulv og tilbehør, samt
+              utendørs terrassebord i ulike treslag.{' '}
+              <span className='mx-4 text-orange-700'>
+                LOKALISERT I HAUGESUND
+              </span>
             </div>
           </div>
           <div className='flex flex-col sm:col-span-1 '>
@@ -59,14 +62,14 @@ const About = () => {
            col-span-1 col-end-5'
         />
       </div>
-      <div className='md:grid md:grid-cols-4 gap-10 mt-28 text-neutral-900 '>
+      <div className='md:grid md:grid-cols-4 gap-10 mt-28 text-neutral-900  '>
         <h1 className='flex text-[250px] mt-[-80px] col-start-2 col-span-1 text-orange-700'>
           19
         </h1>
-        <div className='text-4xl leading-[50px] col-span-1'>
+        <div className='text-4xl leading-[50px] col-span-1 uppercase'>
           år med parkett, listverk og planlegging
         </div>
-        <div className='flex-auto self-stretch text-xl leading-6'>
+        <div className='flex-auto self-stretch text-xl leading-6 max-md:pt-10'>
           For oss er parkett en lidenskap. Vi tenker på parkett nesten døgnet
           rundt. Etter hvert er det også flere og flere som tenker på oss for vi
           har siden oppstarten i 2005 allerede blitt en av Norges ledende i

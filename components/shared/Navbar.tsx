@@ -55,7 +55,7 @@ const components: { title: string; href: string; description: string }[] = [
 
 export function Navbar() {
   return (
-    <div className='flex justify-between mx-auto max-w-screen-2xl px-6 sm:px-8 md:px-12'>
+    <div className='flex justify-between mx-auto max-w-screen-2xl pt-4 px-6 sm:px-8 md:px-12'>
       <Image
         src='/parketgruppen.png'
         alt='shadcn/ui'

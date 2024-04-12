@@ -48,7 +48,7 @@ const cards = [
 
 const Ansatte = () => {
   return (
-    <div className='w-full bg-[#343432] pt-52'>
+    <div className='w-full bg-[#343432] pt-32 md:pt-52'>
       <div className='flex flex-col px-16 mx-auto max-w-screen-2xl'>
         <Divider Character='D' color='white' />
         <div className='flex gap-5 justify-between ml-16  text-lg text-white '>
@@ -58,12 +58,12 @@ const Ansatte = () => {
         <div className='self-center mt-20 w-full '>
           <div className='grid gap-10 md:grid-cols-4'>
             <div className='flex flex-col sm:col-span-3 '>
-              <div className='text-xl leading-8 text-white max-md:mt-10'>
-                Et av vaare hovedmaal er å tilby vaare kunder en komplett
-                gulvlosning med hoyeste kvalitet i alle ledd fra planlegging,
-                gjennomforing og oppfolging i etterkant av prosjekter. Vi legger
-                også stor vekt paa at alle vaare produkter holder markedets
-                beste kvalitet.
+              <div className='text-xl leading-8 text-white max-md:mt-10 uppercase'>
+                Et av våre hovedmål er å tilby våre kunder en komplett
+                gulvløsning med høyeste kvalitet i alle ledd fra planlegging,
+                gjennomføring og oppfølging i etterkant av prosjekter. Vi legger
+                også stor vekt på at alle våre produkter holder markedets beste
+                kvalitet.
               </div>
             </div>
           </div>
