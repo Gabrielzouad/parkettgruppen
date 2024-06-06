@@ -1,10 +1,8 @@
-// ./schemas/postType.ts
-
 import { defineType, defineField } from 'sanity';
 
 export const postType = defineType({
   name: 'post',
-  title: 'Post',
+  title: 'Blogg',
   type: 'document',
   fields: [
     defineField({
@@ -22,12 +20,6 @@ export const postType = defineType({
       },
     }),
     defineField({
-      name: 'author',
-      title: 'Author',
-      type: 'reference',
-      to: {type: 'author'},
-    }),
-    defineField({
       name: 'mainImage',
       title: 'Main image',
       type: 'image',
@@ -41,9 +33,14 @@ export const postType = defineType({
       type: 'datetime',
     }),
     defineField({
+      name: 'url',
+      title: 'Link til artikkel',
+      type: 'url',
+    }),
+    defineField({
       name: 'body',
       title: 'Body',
-      type: 'blockContent',
+      type: 'text',
     }),
   ],
   preview: {

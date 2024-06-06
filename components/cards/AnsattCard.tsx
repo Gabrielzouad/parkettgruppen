@@ -5,11 +5,11 @@ type AnsattCardProps = {
   id: number;
   name: string;
   role: string;
-  phone: string;
+  email: string;
   image: string;
 };
 
-const AnsattCard = ({ name, role, phone, image }: AnsattCardProps) => {
+const AnsattCard = ({ name, role, email, image }: AnsattCardProps) => {
   return (
     <div className=' my-4'>
       <Image
@@ -23,7 +23,7 @@ const AnsattCard = ({ name, role, phone, image }: AnsattCardProps) => {
       <div className='w-full h-0.5 my-2 bg-slate-400'></div>
       <div className='flex justify-between '>
         <p className='opacity-60 text-slate-200'>{role}</p>
-        <p className='opacity-60 text-slate-200'>{phone}</p>
+        <p className='opacity-60 text-slate-200'>{email}</p>
       </div>
     </div>
   );

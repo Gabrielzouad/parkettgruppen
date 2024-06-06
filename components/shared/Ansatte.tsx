@@ -1,6 +1,9 @@
 import React from 'react';
 import Divider from './Divider';
 import AnsattCard from '../cards/AnsattCard';
+import { sanityFetch } from '@/sanity/lib/fetch';
+import { SanityDocument } from 'next-sanity';
+import { EMPOLOYEES_QUERY } from '@/sanity/lib/queries';
 const cards = [
   {
     id: 1,
@@ -46,9 +49,12 @@ const cards = [
   },
 ];
 
-const Ansatte = () => {
+const Ansatte = async () => {
+  const ansatte = await sanityFetch<SanityDocument[]>({
+    query: EMPOLOYEES_QUERY,
+  });
   return (
-    <div className='w-full bg-[#343432] pt-32 md:pt-52'>
+    <div className='w-full bg-[#343432] pt-32 md:pt-52 pb-24'>
       <div className='flex flex-col px-16 mx-auto max-w-screen-2xl'>
         <Divider Character='D' color='white' />
         <div className='flex gap-5 justify-between ml-16  text-lg text-white '>
@@ -58,7 +64,7 @@ const Ansatte = () => {
         <div className='self-center mt-20 w-full '>
           <div className='grid gap-10 md:grid-cols-4'>
             <div className='flex flex-col sm:col-span-3 '>
-              <div className='text-xl leading-8 text-white max-md:mt-10 uppercase'>
+              <div className='text-xl leading-8 text-white font-thin max-md:mt-10 uppercase'>
                 Et av våre hovedmål er å tilby våre kunder en komplett
                 gulvløsning med høyeste kvalitet i alle ledd fra planlegging,
                 gjennomføring og oppfølging i etterkant av prosjekter. Vi legger
@@ -68,18 +74,18 @@ const Ansatte = () => {
             </div>
           </div>
           <div className='grid gap-10 mt-12 grid-cols-1 md:grid-cols-2 xl:grid-cols-4'>
-            {cards.map((card, index) => (
+            {ansatte.map((ansatt, index) => (
               <>
                 {index % 3 === 0 && (
                   <div className='hidden xl:flex col-span-1'></div>
                 )}
                 <AnsattCard
                   key={index}
-                  id={card.id}
-                  name={card.name}
-                  role={card.role}
-                  phone={card.phone}
-                  image={card.image}
+                  id={ansatt.id}
+                  name={ansatt.name}
+                  role={ansatt.role}
+                  email={ansatt.email}
+                  image={ansatt.image}
                 />
               </>
             ))}

@@ -14,66 +14,31 @@ import {
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
 import Image from 'next/image';
-
-const components: { title: string; href: string; description: string }[] = [
-  {
-    title: 'Alert Dialog',
-    href: '/docs/primitives/alert-dialog',
-    description:
-      'A modal dialog that interrupts the user with important content and expects a response.',
-  },
-  {
-    title: 'Hover Card',
-    href: '/docs/primitives/hover-card',
-    description:
-      'For sighted users to preview content available behind a link.',
-  },
-  {
-    title: 'Progress',
-    href: '/docs/primitives/progress',
-    description:
-      'Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.',
-  },
-  {
-    title: 'Scroll-area',
-    href: '/docs/primitives/scroll-area',
-    description: 'Visually or semantically separates content.',
-  },
-  {
-    title: 'Tabs',
-    href: '/docs/primitives/tabs',
-    description:
-      'A set of layered sections of content—known as tab panels—that are displayed one at a time.',
-  },
-  {
-    title: 'Tooltip',
-    href: '/docs/primitives/tooltip',
-    description:
-      'A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.',
-  },
-];
+import { produkter } from '@/lib/constants';
 
 export function Navbar() {
   return (
     <div className='flex justify-between mx-auto max-w-screen-2xl pt-4 px-6 sm:px-8 md:px-12'>
-      <Image
-        src='/parketgruppen.png'
-        alt='shadcn/ui'
-        width={150}
-        height={150}
-        className='cursor-pointer'
-      />
+      <Link href='/'>
+        <Image
+          src='/parketgruppen.png'
+          alt='shadcn/ui'
+          width={150}
+          height={150}
+          className='cursor-pointer'
+        />
+      </Link>
       <NavigationMenu className='hidden sm:flex'>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <Link href='/docs' legacyBehavior passHref>
+            <Link href='#about' legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                 OM OSS
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href='/docs' legacyBehavior passHref>
+            <Link href='#prosjekter' legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                 PROSJEKTER
               </NavigationMenuLink>
@@ -83,7 +48,7 @@ export function Navbar() {
             <NavigationMenuTrigger>PRODUKTER</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className='grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] '>
-                {components.map((component) => (
+                {produkter.map((component) => (
                   <ListItem
                     key={component.title}
                     title={component.title}
@@ -98,14 +63,7 @@ export function Navbar() {
         </NavigationMenuList>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <Link href='/docs' legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                KARRIERE
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <Link href='/docs' legacyBehavior passHref>
+            <Link href='#blogg' legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                 BLOGG
               </NavigationMenuLink>

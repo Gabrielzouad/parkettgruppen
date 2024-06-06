@@ -3,18 +3,20 @@ import Divider from './Divider';
 
 const About = () => {
   return (
-    <div className='flex flex-col px-16 mt-32 mx-auto max-w-screen-2xl'>
+    <div
+      className='flex flex-col px-16 mt-32 mx-auto max-w-screen-2xl'
+      id='about'
+    >
       <Divider Character='A' />
       <div className='flex gap-5 justify-between ml-16 max-w-full text-lg text-neutral-900 '>
         <div>OM OSS</div>
-        <div>LES MER</div>
       </div>
       <div className='self-center mt-20 w-full '>
         <div className='grid gap-10 md:grid-cols-4'>
           <div className='flex flex-col sm:col-span-2 '>
             <div className='text-4xl leading-[52px] text-neutral-900 max-md:mt-10 max-md:max-w-full uppercase'>
               Vi tilbyr et variert utvalg av parkettgulv og tilbehør, samt
-              utendørs terrassebord i ulike treslag.{' '}
+              utendørs terrassebord i ulike treslag.
               <span className='mx-4 text-orange-700'>
                 LOKALISERT I HAUGESUND
               </span>

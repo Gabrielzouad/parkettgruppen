@@ -1,6 +1,7 @@
 import React from 'react';
 import Divider from './Divider';
 import { ArrowRight } from 'lucide-react';
+import { produkter } from '@/lib/constants';
 
 const Produkter = () => {
   return (
@@ -11,36 +12,14 @@ const Produkter = () => {
         <div>SE ALLE PRODUKTER</div>
       </div>
       <div className='grid md:ml-16 md:grid-cols-2 pt-10'>
-        <div className='flex flex-col'>
-          <div className='flex items-center gap-4'>
+        {produkter.map((produkt, index) => (
+          <div key={index} className='flex items-center gap-4'>
             <ArrowRight />
-            <h2 className='text-3xl sm:text-4xl xl:text-6xl'>PARKETT</h2>
+            <a href={produkt.href} className='text-3xl sm:text-4xl xl:text-6xl'>
+              {produkt.title}
+            </a>
           </div>
-          <div className='flex items-center gap-4'>
-            <ArrowRight />
-            <h2 className='text-3xl sm:text-4xl xl:text-6xl'>LISTVERK</h2>
-          </div>
-          <div className='flex items-center gap-4'>
-            <ArrowRight />
-            <h2 className='text-3xl sm:text-4xl xl:text-6xl'>
-              SPESIALKOMPONENTER
-            </h2>
-          </div>
-        </div>
-        <div className='flex flex-col'>
-          <div className='flex items-center gap-4'>
-            <ArrowRight />
-            <h2 className='text-3xl sm:text-4xl xl:text-6xl'>LEVERING</h2>
-          </div>
-          <div className='flex items-center gap-4'>
-            <ArrowRight />
-            <h2 className='text-3xl sm:text-4xl xl:text-6xl'>MONTERING</h2>
-          </div>
-          <div className='flex items-center gap-4'>
-            <ArrowRight />
-            <h2 className='text-3xl sm:text-4xl xl:text-6xl'>VEDLIKEHOLD</h2>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
