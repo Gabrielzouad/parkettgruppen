@@ -18,7 +18,7 @@ const Hero = async () => {
           <br />
           levert og montert
         </div>
-        <div className='flex items-center sm:flex-col mt-5'>
+        <div className='flex flex-col items-center sm:items-end mt-5'>
           <div className='text-2xl sm:text-4xl uppercase font-bold'>
             PARKETT.
             <br />
@@ -26,7 +26,7 @@ const Hero = async () => {
             <br />
             MONTERING.
           </div>
-          <div className='text-lg mt-4 sm:mt-10'>— siden 2005</div>
+          <div className='text-lg pr-2 mt-4 sm:mt-10'>— siden 2005</div>
         </div>
       </div>
       <HeroCarousel heroImages={heroImages} />

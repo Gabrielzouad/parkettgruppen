@@ -31,7 +31,7 @@ const ProsjektCarousel = ({ projects }: any) => {
             <div className='p-1'>
               <Card className='relative'>
                 <CardContent className='flex aspect-video items-center justify-center p-6'>
-                  <a href={`/prosjekt/${project.slug}`}>
+                  <a href={`/prosjekt/${project.slug.current}`}>
                     <Image
                       src={project.imageUrl}
                       alt={project.name}

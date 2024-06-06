@@ -9,15 +9,12 @@ const Produkter = () => {
       <Divider Character='C' />
       <div className='flex gap-5 justify-between ml-16  text-lg text-neutral-900 '>
         <div>PRODUKTER</div>
-        <div>SE ALLE PRODUKTER</div>
       </div>
       <div className='grid md:ml-16 md:grid-cols-2 pt-10'>
         {produkter.map((produkt, index) => (
           <div key={index} className='flex items-center gap-4'>
-            <ArrowRight />
-            <a href={produkt.href} className='text-3xl sm:text-4xl xl:text-6xl'>
-              {produkt.title}
-            </a>
+            {/* <ArrowRight /> */}
+            <a className='text-3xl sm:text-4xl xl:text-6xl'>{produkt.title}</a>
           </div>
         ))}
       </div>

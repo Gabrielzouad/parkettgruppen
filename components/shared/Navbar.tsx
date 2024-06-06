@@ -15,8 +15,10 @@ import {
 } from '@/components/ui/navigation-menu';
 import Image from 'next/image';
 import { produkter } from '@/lib/constants';
+import { usePathname } from 'next/navigation';
 
 export function Navbar() {
+  const pathname = usePathname();
   return (
     <div className='flex justify-between mx-auto max-w-screen-2xl pt-4 px-6 sm:px-8 md:px-12'>
       <Link href='/'>
@@ -31,20 +33,28 @@ export function Navbar() {
       <NavigationMenu className='hidden sm:flex'>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <Link href='#about' legacyBehavior passHref>
+            <Link
+              href={pathname === '/' ? '#about' : '/'}
+              legacyBehavior
+              passHref
+            >
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                 OM OSS
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href='#prosjekter' legacyBehavior passHref>
+            <Link
+              href={pathname === '/' ? '#prosjekter' : '/'}
+              legacyBehavior
+              passHref
+            >
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                 PROSJEKTER
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
-          <NavigationMenuItem>
+          {/*  <NavigationMenuItem>
             <NavigationMenuTrigger>PRODUKTER</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className='grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] '>
@@ -59,18 +69,26 @@ export function Navbar() {
                 ))}
               </ul>
             </NavigationMenuContent>
-          </NavigationMenuItem>
+          </NavigationMenuItem> */}
         </NavigationMenuList>
         <NavigationMenuList>
           <NavigationMenuItem>
-            <Link href='#blogg' legacyBehavior passHref>
+            <Link
+              href={pathname === '/' ? '#blogg' : '/'}
+              legacyBehavior
+              passHref
+            >
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                 BLOGG
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href='/docs' legacyBehavior passHref>
+            <Link
+              href={pathname === '/' ? '#kontakt' : '/'}
+              legacyBehavior
+              passHref
+            >
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                 KONTAKT
               </NavigationMenuLink>
