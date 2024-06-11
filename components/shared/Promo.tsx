@@ -1,19 +1,22 @@
+import Image from 'next/image';
 import React from 'react';
 
 const Promo = () => {
   return (
     <div className='flex flex-col overflow-hidden relative px-16 py-10 text-white min-h-screen max-md:px-5'>
       <div className='flex flex-col flex-grow'>
-        <img
+        <Image
           loading='lazy'
-          srcSet='https://cdn.builder.io/api/v1/image/assets/TEMP/1d93be12ca17d26906c985a4f1d78672bfd9359b9631121982696d27dbed069d?apiKey=b446d51b9534433b80edb44226844ac6&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/1d93be12ca17d26906c985a4f1d78672bfd9359b9631121982696d27dbed069d?apiKey=b446d51b9534433b80edb44226844ac6&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/1d93be12ca17d26906c985a4f1d78672bfd9359b9631121982696d27dbed069d?apiKey=b446d51b9534433b80edb44226844ac6&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/1d93be12ca17d26906c985a4f1d78672bfd9359b9631121982696d27dbed069d?apiKey=b446d51b9534433b80edb44226844ac6&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/1d93be12ca17d26906c985a4f1d78672bfd9359b9631121982696d27dbed069d?apiKey=b446d51b9534433b80edb44226844ac6&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/1d93be12ca17d26906c985a4f1d78672bfd9359b9631121982696d27dbed069d?apiKey=b446d51b9534433b80edb44226844ac6&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/1d93be12ca17d26906c985a4f1d78672bfd9359b9631121982696d27dbed069d?apiKey=b446d51b9534433b80edb44226844ac6&width=2000 2000w'
+          src='/promobilde.jpg'
           className='object-cover absolute inset-0 w-full h-full'
+          alt='Promo image'
+          fill
         />
-        <div className='relative self-start uppercase text-6xl lg:text-[160px]'>
+        <div className='relative self-start uppercase text-4xl md:text-8xl xl:text-[160px]'>
           PARKETTGRUPPEN
         </div>
       </div>
-      <div className='relative self-end text-6xl lg:text-8xl w-1/2 uppercase'>
+      <div className='relative self-end text-4xl text-end md:text-8xl w-1/2 uppercase'>
         Vi tenker på parkett nesten døgnet rundt.
       </div>
     </div>

@@ -2,11 +2,11 @@ import React from 'react';
 
 const page = () => {
   return (
-    <div className='flex flex-col max-w-screen-2xl items-center mx-auto h-1/2 pt-32'>
-      <h1 className='text-6xl leading-[110px] max-md:max-w-full max-md:text-2xl max-md:leading-10 uppercase'>
-        Åpenhetsloven{' '}
+    <div className='flex flex-col max-w-screen-2xl items-center mx-auto h-screen pt-32'>
+      <h1 className='text-6xl leading-[110px] max-md:max-w-full  max-md:leading-10 uppercase'>
+        Åpenhetsloven
       </h1>
-      <p className='text-xl leading-8 text-neutral-900 max-md:mt-10'>
+      <p className='text-xl leading-8 text-neutral-900 mt-10 max-md:mt-20 p-5'>
         Åpenhetsloven, også kjent som &quot;Lov om virksomheters åpenhet og
         arbeid med grunnleggende menneskerettigheter og anstendige
         arbeidsforhold,&quot; trådte i kraft 1. juli 2022. Denne loven pålegger

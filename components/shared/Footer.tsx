@@ -35,7 +35,7 @@ const Footer = () => {
           </div>
         </div>
         <div className='flex flex-col items-center my-12'>
-          <a className='text-slate-600 text-lg underline' href='/åpenhetsloven'>
+          <a className='text-slate-600 text-lg underline' href='/apenhetsloven'>
             Åpenhetsloven
           </a>
           <p className=''>© {year} PARKETTGRUPPEN</p>

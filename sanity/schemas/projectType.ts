@@ -36,6 +36,7 @@ export const projectType = defineType({
       name: 'body',
       title: 'Beskrivelse',
       type: 'array',
+      // @ts-ignore
       of: [
         {
           type: 'block',
