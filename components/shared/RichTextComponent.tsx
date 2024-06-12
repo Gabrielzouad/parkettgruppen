@@ -40,7 +40,6 @@ const RichTextComponent = async ({ slug }: any) => {
     query: PROJECT_BY_SLUG_QUERY,
     params: { slug },
   });
-  console.log(body);
   return (
     <div className='h-screen'>
       <div className='flex justify-between'>

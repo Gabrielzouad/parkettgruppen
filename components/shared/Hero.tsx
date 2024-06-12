@@ -9,7 +9,6 @@ const Hero = async () => {
   const heroImages = await sanityFetch<SanityDocument[]>({
     query: HERO_IMAGES_QUERY,
   });
-
   return (
     <div className='flex flex-col mx-auto max-w-screen-2xl sm:px-0'>
       <div className='flex max-w-screen-2xl gap-5 items-start px-4 sm:px-16 mt-24 text-neutral-900 max-md:flex-wrap max-md:pr-5 max-md:mt-10 max-md:max-w-full'>

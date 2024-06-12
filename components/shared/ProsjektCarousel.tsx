@@ -12,7 +12,6 @@ import Autoplay from 'embla-carousel-autoplay';
 import Image from 'next/image';
 
 const ProsjektCarousel = ({ projects }: any) => {
-  console.log(projects);
   return (
     <Carousel
       opts={{
@@ -20,7 +19,7 @@ const ProsjektCarousel = ({ projects }: any) => {
       }}
       plugins={[
         Autoplay({
-          delay: 2000,
+          delay: 3000,
         }),
       ]}
       className=' w-full sm:w-4/6 pt-10 mx-auto'
