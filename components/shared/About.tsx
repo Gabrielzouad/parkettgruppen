@@ -1,5 +1,7 @@
 import React from 'react';
 import Divider from './Divider';
+import { selskaper } from '@/lib/constants';
+import Image from 'next/image';
 
 const About = () => {
   return (
@@ -79,6 +81,27 @@ const About = () => {
           er basert på å kunne levere og montere alle typer tregulv med tilbehør
           til prosjekter over hele Skandinavia.
         </div>
+      </div>
+      <h2 className='flex justify-center my-8 text-3xl leading-8'>
+        Våre Partnere
+      </h2>
+      <div className='flex flex-wrap items-center justify-center gap-4 md:gap-16 mt-5'>
+        {selskaper.map(({ id, img, name, link }) => (
+          <a
+            key={id}
+            href={link}
+            className='flex flex-col flex-wrap justify-center items-center md:max-w-60 max-w-32 gap-2 hover:cursor-pointer'
+          >
+            <Image
+              src={img}
+              alt={name}
+              height='160'
+              width='160'
+              className='h-16 w-16 md:h-32 md:w-32 object-contain'
+            />
+            <p className='text-sm'>{name}</p>
+          </a>
+        ))}
       </div>
     </div>
   );

@@ -4,50 +4,6 @@ import AnsattCard from '../cards/AnsattCard';
 import { sanityFetch } from '@/sanity/lib/fetch';
 import { SanityDocument } from 'next-sanity';
 import { EMPOLOYEES_QUERY } from '@/sanity/lib/queries';
-const cards = [
-  {
-    id: 1,
-    name: 'Card 1',
-    role: 'Role',
-    phone: '+47 123 45 678',
-    image: '/person.png',
-  },
-  {
-    id: 2,
-    name: 'Card 2',
-    role: 'Role',
-    phone: '+47 123 45 678',
-    image: '/person.png',
-  },
-  {
-    id: 3,
-    name: 'Card 3',
-    role: 'Role',
-    phone: '+47 123 45 678',
-    image: '/person.png',
-  },
-  {
-    id: 4,
-    name: 'Card 4',
-    role: 'Role',
-    phone: '+47 123 45 678',
-    image: '/person.png',
-  },
-  {
-    id: 5,
-    name: 'Card 5',
-    role: 'Role',
-    phone: '+47 123 45 678',
-    image: '/person.png',
-  },
-  {
-    id: 6,
-    name: 'Card 6',
-    role: 'Role',
-    phone: '+47 123 45 678',
-    image: '/person.png',
-  },
-];
 
 const Ansatte = async () => {
   const ansatte = await sanityFetch<SanityDocument[]>({

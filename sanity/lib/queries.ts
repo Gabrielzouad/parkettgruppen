@@ -32,10 +32,10 @@ export const PROJECT_BY_SLUG_QUERY = groq`*[_type == "project" && slug.current =
     publishedAt
   }
   `;
-export const EMPOLOYEES_QUERY = groq`*[_type == "employee"] {
-    name,
-    role,
-    phone,
-    "imageUrl": image.asset->url
-  } | order(name asc)
+export const EMPOLOYEES_QUERY = groq`*[_type == "ansatteType"] {
+  name,
+  role,
+  email,
+  "imageUrl": image.asset->url
+}
 `;  
