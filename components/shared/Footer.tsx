@@ -1,19 +1,33 @@
 import React from 'react';
-import Divider from './Divider';
 
 const Footer = () => {
   const year = new Date().getFullYear();
   return (
     <div className='w-full bg-slate-50' id='kontakt'>
-      <div className='flex flex-col px-16 mt-32  mx-auto max-w-screen-2xl '>
+      <div className='flex flex-col p-6 mt-32 mx-auto max-w-screen-2xl '>
         <div className='md:grid grid-cols-2 mt-12 gap-8 '>
           <h2 className='text-5xl md:text-7xl'>
-            TRENGER DU GULV TIL PROSJEKTET? TA KONTAKT! VI BITER IKKE.
+            TRENGER DU GULV TIL PROSJEKTET? TA KONTAKT!
           </h2>
           <div className='flex gap-2 text-2xl max-md:my-6 '>
-            <a className='hover:underline'>FACEBOOK</a>
-            <a className='hover:underline'>INSTAGRAM</a>
-            <a className='hover:underline'>LINKEDIN</a>
+            <a
+              className='hover:underline'
+              href='https://www.facebook.com/Parkettgruppen?locale=nb_NO'
+            >
+              FACEBOOK
+            </a>
+            <a
+              className='hover:underline'
+              href='https://www.instagram.com/parkettgruppen/'
+            >
+              INSTAGRAM
+            </a>
+            <a
+              className='hover:underline'
+              href='https://www.linkedin.com/company/abs-parkettgruppen-norge-as/about/'
+            >
+              LINKEDIN
+            </a>
           </div>
         </div>
         <div className='grid md:grid-cols-4 overflow-hidden'>

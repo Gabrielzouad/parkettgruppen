@@ -6,21 +6,19 @@ import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
 import Image from 'next/image';
-import { produkter } from '@/lib/constants';
+
 import { usePathname } from 'next/navigation';
 
 export function Navbar() {
   const pathname = usePathname();
   return (
-    <div className='flex justify-between mx-auto max-w-screen-2xl pt-4 px-6 sm:px-8 md:px-12'>
+    <div className='flex justify-between mx-auto max-w-screen-2xl pt-4 p-6 '>
       <Link href='/'>
         <Image
           src='/parketgruppen.png'
@@ -54,22 +52,6 @@ export function Navbar() {
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
-          {/*  <NavigationMenuItem>
-            <NavigationMenuTrigger>PRODUKTER</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className='grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] '>
-                {produkter.map((component) => (
-                  <ListItem
-                    key={component.title}
-                    title={component.title}
-                    href={component.href}
-                  >
-                    {component.description}
-                  </ListItem>
-                ))}
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem> */}
         </NavigationMenuList>
         <NavigationMenuList>
           <NavigationMenuItem>

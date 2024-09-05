@@ -13,7 +13,7 @@ import Autoplay from 'embla-carousel-autoplay';
 
 const HeroCarousel = ({ heroImages }: any) => {
   return (
-    <div className='mt-12 '>
+    <div className='md:mt-10'>
       <Carousel
         opts={{
           align: 'start',

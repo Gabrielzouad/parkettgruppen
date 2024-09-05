@@ -11,7 +11,7 @@ const Ansatte = async () => {
   });
   return (
     <div className='w-full bg-[#343432] pt-32 md:pt-52 pb-24'>
-      <div className='flex flex-col px-16 mx-auto max-w-screen-2xl'>
+      <div className='flex flex-col p-6 mx-auto max-w-screen-2xl'>
         <Divider Character='D' color='white' />
         <div className='flex gap-5 justify-between ml-16  text-lg text-white '>
           <div>VÅRT TEAM</div>
@@ -41,7 +41,7 @@ const Ansatte = async () => {
                   name={ansatt.name}
                   role={ansatt.role}
                   email={ansatt.email}
-                  image={ansatt.image}
+                  image={ansatt.image ? ansatt.image : '/defaultAnsatte.png'}
                 />
               </>
             ))}

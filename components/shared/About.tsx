@@ -6,7 +6,7 @@ import Image from 'next/image';
 const About = () => {
   return (
     <div
-      className='flex flex-col px-16 mt-32 mx-auto max-w-screen-2xl'
+      className='flex flex-col p-6 mt-32 mx-auto max-w-screen-2xl'
       id='about'
     >
       <Divider Character='A' />
@@ -82,7 +82,7 @@ const About = () => {
           til prosjekter over hele Skandinavia.
         </div>
       </div>
-      <h2 className='flex justify-center my-8 text-3xl leading-8'>
+      <h2 className='flex justify-center my-8 text-3xl leading-8 pt-20'>
         Våre Partnere
       </h2>
       <div className='flex flex-wrap items-center justify-center gap-4 md:gap-16 mt-5'>
