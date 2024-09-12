@@ -62,4 +62,10 @@ export const selskaper = [
     img: "/logo/optimeralogo.png",
     link: "https://www.optimera.no",
   },
+  {
+    id: 10,
+    name: "Bjelin",
+    img: "/logo/bjelin.png",
+    link: "no.bjelin.com/no/",
+  }
 ];

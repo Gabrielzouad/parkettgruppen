@@ -36,6 +36,7 @@ export const EMPOLOYEES_QUERY = groq`*[_type == "ansatteType"] {
   name,
   role,
   email,
+  phone,
   "imageUrl": image.asset->url
 }
 `;  

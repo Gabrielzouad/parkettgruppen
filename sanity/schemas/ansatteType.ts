@@ -21,6 +21,11 @@ export const ansatteType = defineType({
       type: 'string',
     }),
     defineField({
+      name: 'phone',
+      title: 'Phone',
+      type: 'string',
+    }),
+    defineField({
       name: 'image',
       title: 'Image',
       type: 'image',

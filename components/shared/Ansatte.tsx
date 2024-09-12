@@ -41,7 +41,8 @@ const Ansatte = async () => {
                   name={ansatt.name}
                   role={ansatt.role}
                   email={ansatt.email}
-                  image={ansatt.image ? ansatt.image : '/defaultAnsatte.png'}
+                  imageUrl={ansatt.image ? ansatt.image : '/defaultAnsatte.png'}
+                  phone={ansatt.phone}
                 />
               </>
             ))}

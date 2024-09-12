@@ -1,32 +1,58 @@
-import React from 'react';
+import { Card } from '@/components/ui/card';
+import { Mail, Phone } from 'lucide-react';
 import Image from 'next/image';
 
-type AnsattCardProps = {
-  id: number;
+interface EmployeeCardProps {
   name: string;
-  role: string;
   email: string;
-  image: string;
-};
+  role: string;
+  phone: string;
+  imageUrl: string;
+  id: number;
+}
 
-const AnsattCard = ({ name, role, email, image }: AnsattCardProps) => {
+export default function AnsattCard({
+  name,
+  email,
+  role,
+  phone,
+  imageUrl,
+}: EmployeeCardProps) {
   return (
-    <div className='my-4'>
-      <Image
-        src={image}
-        alt={name}
-        width={250}
-        height={300}
-        className='w-full'
-      />
-      <h2 className='my-2 tracking-wide text-white '>{name}</h2>
-      <div className='w-full h-0.5 my-2 bg-slate-400'></div>
-      <div className='flex justify-between '>
-        <p className='text-slate-200'>{role}</p>
-        <p className='text-slate-200'>{email}</p>
+    <Card className='w-full max-w-sm mx-auto overflow-hidden border border-gray-200 rounded-none'>
+      <div className='relative h-72'>
+        <Image
+          alt={`${name}'s profile`}
+          className='object-cover w-full h-full'
+          height='300'
+          src={imageUrl}
+          style={{
+            aspectRatio: '300/300',
+            objectFit: 'cover',
+          }}
+          width='300'
+        />
       </div>
-    </div>
+      <div className='p-6 space-y-4 bg-white'>
+        <div className='space-y-1'>
+          <h2 className='text-2xl font-bold tracking-tight text-gray-900'>
+            {name}
+          </h2>
+          <p className='text-sm text-gray-500'>{role}</p>
+        </div>
+        <div className='space-y-2 items-center'>
+          <div className='flex items-center space-x-2 text-center text-sm text-gray-700'>
+            <Mail className='w-4 h-4' />
+            <span>{email}</span>
+          </div>
+          {phone && (
+            <div className='flex items-center space-x-2 text-sm text-gray-700'>
+              <Phone className='w-4 h-4' />
+              <span>{phone}</span>
+            </div>
+          )}
+        </div>
+      </div>
+    </Card>
   );
-};
-
-export default AnsattCard;
+}
