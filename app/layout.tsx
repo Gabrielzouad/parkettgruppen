@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Oswald } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/react';
 
 import './globals.css';
 import { Navbar } from '@/components/shared/Navbar';
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
   title: 'Parkettgruppen',
   description:
     'Vi leverer og monterer alle typer parkett. Vi har et utallig utvalg av typer og treslag, fra veletablerte produsenter som Tarkett, Boen og Gunreben. Vi har også et stort utvalg av motiver, kompassroser og spesialkomponenter til gulv.',
+  icons: { icon: '/parketgruppen.png', apple: '/apple-touch-icon.png' },
 };
 
 export default function RootLayout({
@@ -23,6 +25,7 @@ export default function RootLayout({
       <body className={oswald.className}>
         <Navbar />
         {children}
+        <Analytics />
         <Footer />
       </body>
     </html>

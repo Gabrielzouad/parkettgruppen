@@ -19,9 +19,6 @@ const About = () => {
             <div className='text-4xl leading-[52px] text-neutral-900 max-md:mt-10 max-md:max-w-full uppercase'>
               Vi tilbyr et variert utvalg av parkettgulv og tilbehør, samt
               utendørs terrassebord i ulike treslag.
-              <span className='mx-4 text-orange-700'>
-                LOKALISERT I HAUGESUND
-              </span>
             </div>
           </div>
           <div className='flex flex-col sm:col-span-1 '>
@@ -89,6 +86,7 @@ const About = () => {
         {selskaper.map(({ id, img, name, link }) => (
           <a
             key={id}
+            target='_blank'
             href={link}
             className='flex flex-col flex-wrap justify-center items-center md:max-w-60 max-w-32 gap-2 hover:cursor-pointer'
           >

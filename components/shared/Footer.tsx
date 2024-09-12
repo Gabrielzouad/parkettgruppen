@@ -36,6 +36,7 @@ const Footer = () => {
               className={`shrink-0 max-w-full border border-solid black bg-black mb-6 border-black w-screen`}
             />
             <h3 className='text-2xl'>KONTAKT OSS</h3>
+            <p className='text-lg'>4000 65 86</p>
             <p className='text-lg'>POST@PARKETTGRUPPEN.NO</p>
             <p className='text-lg'>Mandag - Fredag: 08:00 - 16:00</p>
           </div>
@@ -43,9 +44,8 @@ const Footer = () => {
             <div
               className={`shrink-0 max-w-full border border-solid black bg-black mb-6 border-black w-screen`}
             />
-            <h3 className='text-2xl'>HAUGESUND</h3>
+            <h3 className='text-2xl'>Addresse</h3>
             <p className='text-lg'>Vestheimvegen 23, 4250 Kopervik</p>
-            <p className='text-lg'>4000 65 86</p>
           </div>
         </div>
         <div className='flex flex-col items-center my-12'>
