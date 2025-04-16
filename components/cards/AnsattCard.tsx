@@ -22,15 +22,16 @@ export default function AnsattCard({
     <Card className='w-full max-w-sm mx-auto overflow-hidden border border-gray-200 rounded-none'>
       <div className='relative h-72'>
         <Image
-          alt={`${name}'s profile`}
-          className='object-cover w-full h-full'
-          height='300'
-          src={imageUrl}
+          alt={`${name} sitt bilde`}
+          className='object-cover'
+          src={imageUrl || '/defaultAnsatte.png'}
+          fill
+          sizes='(max-width: 768px) 100vw, 300px'
           style={{
-            aspectRatio: '300/300',
             objectFit: 'cover',
+            objectPosition: 'center 10%', // Position to focus on face/upper body
           }}
-          width='300'
+          priority
         />
       </div>
       <div className='p-6 space-y-4 bg-white'>
