@@ -7,7 +7,7 @@ const Produkter = () => {
     <div className='flex flex-col px-16 mt-32 mb-52 mx-auto max-w-screen-2xl'>
       <Divider Character='C' />
       <div className='flex gap-5 justify-between ml-16  text-lg text-neutral-900 '>
-        <div>PRODUKTER</div>
+        <p className='text-xl'>HVA GJØR VI ?</p>
       </div>
       <div className='grid md:ml-16 md:grid-cols-2 pt-10 ml-2 '>
         {produkter.map((produkt, index) => (
